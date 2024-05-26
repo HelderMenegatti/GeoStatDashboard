@@ -1,0 +1,70 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Document{% endblock %}</title>
+    
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="{% static 'css/fonts-googleapis/css.css' %}">
+
+    <!-- MDB -->
+    <link rel="stylesheet" href="{% static 'css/MDB/mdb.min.css' %}">
+
+    <!-- base.css -->
+    <link rel="stylesheet" href="{% static 'css/base-account.css' %}">
+</head>
+    <body style="background-color:#58a158bf;">
+        
+        <div class="container pt-4">
+            <div class="card" style="width: 30%;">
+                
+                <div class="card-body box-shadow-card-b" >
+                    <div class="row">
+                       
+                        <a href="{% url 'login' %}">
+                            <div class="col-12 d-flex justify-content-center align-items-center">
+
+                                <img src="{% static 'img/icons/periscope.png' %}" height="75" alt="Logo">
+                                
+                            </div>
+                        </a>
+                        <div class="col-12 d-flex justify-content-center align-items-center">
+                            <h5 class="card-title">GeoStartDashboard</h5>
+                        </div>
+                        <div class="col-12 mt-5">
+                            {% block content %}
+                            
+                            {% endblock %}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="{% static 'js/jquery/jquery-3.5.1.slim.min.js' %}"></script>
+        <script src="{% static 'js/popper/popper.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap/bootstrap.bundle.min.js' %}"></script>
+
+
+        <!-- MDB -->
+        <script src="{% static 'js/MDB/mdb.umd.min.js' %}"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        {% block js %}
+        
+        {% endblock %}
+
+    </body>
+</html>

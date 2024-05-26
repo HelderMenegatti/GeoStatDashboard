@@ -1,0 +1,36 @@
+{% extends 'base-account.html' %}
+
+{% block title %}Login {% endblock %}
+
+{% block card_title %}Login{% endblock %}
+
+{% block content %}
+{% load django_bootstrap5 %}
+    <form method="POST" action="{% url 'login' %}">
+        {% csrf_token %}
+        
+        {% bootstrap_form form %}
+
+        {% if error %}
+            <span style="color: red;">{{ error }}</span>
+            <br><br>
+        {% endif %}
+        
+        <input class="btn btn-primary" type="submit" value="Entrar" id="submit-form"/>
+    </form>
+    <a href="{% url 'signup' %}">cadastre-se</a>
+{% endblock %}
+
+{% block js %}
+    <script>
+        function fetchToken() {
+            const username = document.getElementById('id_username').value;
+            const password = document.getElementById('id_password').value;
+            localStorage.setItem('userName', username);
+            localStorage.setItem('password', password);
+        }
+
+        document.getElementById('submit-form').addEventListener('click', fetchToken);
+    </script>
+    
+{% endblock %}

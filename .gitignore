@@ -1,0 +1,4 @@
+venv
+.env
+__pycache__
+municipios_por_estado.xlsx

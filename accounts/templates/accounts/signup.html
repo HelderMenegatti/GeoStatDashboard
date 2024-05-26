@@ -1,0 +1,22 @@
+{% extends 'base-account.html' %}
+
+{% block title %}Cadastre-se{% endblock %}
+
+{% block card_title %}Cadastre-se{% endblock %}
+
+{% block content %}
+{% load django_bootstrap5 %}
+    <form method="POST" action="{% url 'signup' %}">
+        {% csrf_token %}
+
+        {% bootstrap_form form %}
+
+        {% if error %}
+            <span style="color: red;">{{ error }}</span>
+            <br><br>
+        {% endif %}
+        
+        <input class="btn btn-primary" type="submit" value="Cadastrar" />
+    </form>
+
+{% endblock %}
