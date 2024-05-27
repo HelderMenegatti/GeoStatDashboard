@@ -23,7 +23,10 @@ function renderTable(data) {
     tbody.innerHTML = "";  
     data.results.forEach(counties => {
         const tr = document.createElement("tr");
-        tr.innerHTML = `<td>${counties.name}</td>`;
+        tr.innerHTML = `
+            <td>${counties.name}</td>
+            <td>${counties.uf}</td>
+        `;
         tbody.appendChild(tr);
     });
 }

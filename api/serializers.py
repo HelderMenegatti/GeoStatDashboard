@@ -2,9 +2,14 @@ from rest_framework import serializers
 from api.models import State, County
 
 class CountySerializer(serializers.ModelSerializer):
+    uf = serializers.SerializerMethodField()
+
     class Meta:
         model = County
-        fields = ['name']
+        fields = ['name', 'uf']
+
+    def get_uf(self, obj):
+        return obj.state.uf
 
 
 class StateSerializer(serializers.ModelSerializer):
