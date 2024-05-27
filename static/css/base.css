@@ -57,3 +57,7 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
 .margin-top{
     margin-top: 100px;
 }
+
+.obs-text-color {
+    color: #0000005e;
+}
