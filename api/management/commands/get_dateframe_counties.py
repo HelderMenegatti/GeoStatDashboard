@@ -10,15 +10,15 @@ class Command(BaseCommand):
 
         url = "https://servicodados.ibge.gov.br/api/v1/localidades/municipios"
         response = requests.get(url)
-        municipios = response.json()
+        counties = response.json()
 
         data = []
-        for municipio in municipios:
+        for county in counties:
             data.append({
-                "Municipio": municipio['nome'],
-                "Estado": municipio['microrregiao']['mesorregiao']['UF']['nome'],
-                "UF": municipio['microrregiao']['mesorregiao']['UF']['sigla'],
-                "Regiao": municipio['microrregiao']['mesorregiao']['UF']['regiao']['nome']
+                "Municipio": county['nome'],
+                "Estado": county['microrregiao']['mesorregiao']['UF']['nome'],
+                "UF": county['microrregiao']['mesorregiao']['UF']['sigla'],
+                "Regiao": county['microrregiao']['mesorregiao']['UF']['regiao']['nome']
             })
 
 

@@ -9,12 +9,10 @@ class Command(BaseCommand):
 
         excel_file = 'municipios_por_estado.xlsx'
     
-
         df = pd.read_excel(excel_file)
 
         County.objects.all().delete()
         State.objects.all().delete()
-
 
         state_dict = {}
 

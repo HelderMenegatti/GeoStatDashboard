@@ -14,7 +14,6 @@ class StateList(generics.ListAPIView):
     pagination_class = None
 
 
-
 class CountyListView(generics.ListAPIView):
     serializer_class = CountySerializer
     pagination_class = StandardResultsSetPagination
