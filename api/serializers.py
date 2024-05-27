@@ -14,6 +14,5 @@ class StateSerializer(serializers.ModelSerializer):
         model = State
         fields = ['id', 'name', 'region', 'uf', 'county_count']
 
-
     def get_county_count(self, obj):
         return obj.counties.count()

@@ -53,3 +53,7 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
 .background-card {
     background-color: #b8e8eb3d;
 }
+
+.margin-top{
+    margin-top: 100px;
+}

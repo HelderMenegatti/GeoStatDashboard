@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 from api.models import State, County
-# Register your models here.
+
 
 @admin.register(State)
 class StateAdmin(admin.ModelAdmin):

@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Document{% endblock %}</title>
+    <link rel="icon" href="{% static 'img/icons/periscope.png' %}" type="image/x-icon">
     
     <!-- bootstrap -->
     <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}">
@@ -23,10 +24,10 @@
     <!-- base.css -->
     <link rel="stylesheet" href="{% static 'css/base-account.css' %}">
 </head>
-    <body style="background-color:#58a158bf;">
+    <body class="body-background">
         
         <div class="container pt-4">
-            <div class="card" style="width: 30%;">
+            <div class="card">
                 
                 <div class="card-body box-shadow-card-b" >
                     <div class="row">

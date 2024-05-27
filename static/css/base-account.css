@@ -4,6 +4,11 @@ html, body {
     padding: 0;
 }
 
+.body-background {
+    background-color:#58a158bf;
+}
+
+
 .container {
     display: flex;
     justify-content: center;
@@ -23,12 +28,16 @@ html, body {
 .background_nav {
     background-color: #289b5f85 !important;
 }
+
 .background-card {
     box-shadow: 0px -5px 10px 5px rgb(0 0 0 / 50%);
     background-color: #1baf79a6;
 
 }
 
+.card-width {
+    width: 30%; 
+}
 
 .box-shadow-card-b {
     background-color: #e5f0eca6;
