@@ -114,10 +114,10 @@ method: 'POST'
 
 headers: {Content-Type: 'application/json'}
 
-body: {'username: userName', password: password}
+body: {'username: 'userName', password: 'password'}
 ```
 
-responde:
+resposta:
 
 ```
 {
@@ -133,15 +133,15 @@ responde:
 
 parametros necessario:
 
-```
+```removing spaces and cleaning up the code a little more
 method: 'POST'
 
 headers: {Content-Type: 'application/json'}
 
-body: {refresh: refreshToken}
+body: {refresh: 'refreshToken'}
 ```
 
-responde:
+resposta:
 
 ```
 {
@@ -166,7 +166,7 @@ headers: {
 }
 ```
 
-responde:
+resposta:
 
 ```
 [
@@ -197,7 +197,7 @@ headers: {
 }
 ```
 
-responde:
+resposta:
 
 ```
 {
